@@ -646,7 +646,8 @@ def jones_to_stokes(J):
         print("Wrong shape ... should be %dx2 not %dx%d" % (m, n, m))
         return None
 
-    S = np.empty(shape=(n, 4), dtype=np.ndarray)
+    # S = np.empty(shape=(n, 4), dtype=np.ndarray)
+    S = np.empty(shape=(n, 4))
     for i, JJ in enumerate(J):
         S[i] = _jones_to_stokes(JJ)
 
